@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.ebook_reader.ui.App
 import com.example.ebook_reader.ui.theme.Ebook_ReaderTheme
 
 class MainActivity : ComponentActivity() {
@@ -12,6 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Ebook_ReaderTheme {
+                App()
                 }
             }
         }
