@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.ebook_reader.ui.App
 import com.example.ebook_reader.ui.theme.Ebook_ReaderTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Ebook_ReaderTheme {
                 App()
-                }
             }
         }
     }
+}
