@@ -54,7 +54,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-
+    implementation("androidx.compose.material:material-icons-extended")
     // Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
@@ -70,4 +70,7 @@ dependencies {
 
     // Coil (book covers)
     implementation(libs.coil.compose)
+
+    // Google Fonts
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.10.1")
 }

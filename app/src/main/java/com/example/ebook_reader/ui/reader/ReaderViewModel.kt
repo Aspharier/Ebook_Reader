@@ -28,6 +28,14 @@ class ReaderViewModel @Inject constructor(
     private var fileDescriptor: ParcelFileDescriptor? = null
     private val bitmapCache = PageBitmapCache()
 
+    private val _isNightMode = MutableStateFlow(false)
+    val isNightMode: StateFlow<Boolean> = _isNightMode
+
+    fun toggleNightMode() {
+        _isNightMode.value = !_isNightMode.value
+    }
+
+
     fun openBook(context: Context, bookId: String) {
         viewModelScope.launch(Dispatchers.IO) {
             val book = repository.getBookById(bookId) ?: return@launch

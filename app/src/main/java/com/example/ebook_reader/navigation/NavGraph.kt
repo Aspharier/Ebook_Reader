@@ -34,7 +34,10 @@ fun NavGraph(navController: NavHostController) {
             )
         ) { backStackEntry ->
             val bookId = backStackEntry.arguments?.getString("bookId") ?: return@composable
-            ReaderScreen(bookId = bookId)
+            ReaderScreen(
+                bookId = bookId,
+                onBack = { navController.popBackStack() }
+            )
         }
     }
 }
