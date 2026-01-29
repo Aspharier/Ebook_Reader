@@ -6,6 +6,7 @@ sealed interface LibraryUiState {
     data object Loading : LibraryUiState
     data object Empty : LibraryUiState
     data class Success(
-        val books: List<BookEntity>
+            val books: List<BookEntity>,
+            val categorizedBooks: Map<String, List<BookEntity>>
     ) : LibraryUiState
 }
