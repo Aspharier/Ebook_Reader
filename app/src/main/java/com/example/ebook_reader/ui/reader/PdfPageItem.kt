@@ -16,29 +16,39 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.Dp
 
 @Composable
-fun PdfPageItem(pageIndex: Int, viewModel: ReaderViewModel, scale: Float, offset: Offset) {
-    var bitmap by remember { mutableStateOf<Bitmap?>(null) }
+fun PdfPageItem(
+        pageIndex: Int,
+        viewModel: ReaderViewModel,
+        pageHeight: Dp,
+        scale: Float,
+        offset: Offset,
+        isCurrentPage: Boolean
+) {
+        var bitmap by remember { mutableStateOf<Bitmap?>(null) }
 
-    LaunchedEffect(pageIndex) { bitmap = viewModel.renderPage(pageIndex) }
+        LaunchedEffect(pageIndex) { bitmap = viewModel.renderPage(pageIndex) }
 
-    bitmap?.let {
-        Box(modifier = Modifier.fillMaxWidth()) {
-            Image(
-                    bitmap = it.asImageBitmap(),
-                    contentDescription = "Page ${pageIndex + 1}",
-                    modifier =
-                            Modifier.fillMaxWidth()
-                                    .graphicsLayer(
-                                            scaleX = scale,
-                                            scaleY = scale,
-                                            translationX = offset.x,
-                                            translationY = offset.y
-                                    )
-            )
+        bitmap?.let {
+                Box(modifier = Modifier.fillMaxWidth().height(pageHeight)) {
+                        Image(
+                                bitmap = it.asImageBitmap(),
+                                contentDescription = "Page ${pageIndex + 1}",
+                                contentScale = ContentScale.FillWidth,
+                                modifier =
+                                        Modifier.fillMaxWidth()
+                                                .height(pageHeight)
+                                                .graphicsLayer(
+                                                        scaleX = scale,
+                                                        scaleY = scale,
+                                                        translationX = offset.x,
+                                                        translationY = offset.y
+                                                )
+                        )
+                }
         }
-    }
-            ?: Spacer(modifier = Modifier.fillMaxWidth().height(300.dp))
+                ?: Spacer(modifier = Modifier.fillMaxWidth().height(pageHeight))
 }
