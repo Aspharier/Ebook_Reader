@@ -2,7 +2,7 @@
   <img width="150" height="150" alt="AppIconVocab" src="https://github.com/user-attachments/assets/b4a9e8d1-34da-4ead-9582-37764339b256" />"
 </p>
 
-<h1 align="center">Ebook Reader</h1>
+<h1 align="center">BookSyra</h1>
 
 <p align="center">
   A modern and minimal Android eBook reading application built with Kotlin & Jetpack Compose
