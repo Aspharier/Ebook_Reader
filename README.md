@@ -21,7 +21,7 @@ Think of it as your **personal digital library** — simple, fast, and elegant.
 
 | Library | Book Reader | Book Details |
 |--------|-------------|--------------|
-| ![bookSyra1](https://github.com/user-attachments/assets/66f77903-3543-4322-a516-54cf21b121d6) | ![bookSyra3](https://github.com/user-attachments/assets/c4fb95cf-a827-4696-8215-0f1d2f22a508) | ![bookSyra2](https://github.com/user-attachments/assets/afb5d416-7c79-435f-8f91-6316102f0099) |
+| ![bookSyra1](https://github.com/user-attachments/assets/00ebc484-320f-4b36-8e65-61821ca69879) | ![bookSyra3](https://github.com/user-attachments/assets/f933614c-1006-4bf5-8a75-f527ac2d8365) | ![bookSyra2](https://github.com/user-attachments/assets/4f65288b-1522-4ded-9a28-e211f6261a3c) |
 
 ---
 
