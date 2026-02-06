@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/app_icon_placeholder" width="120" alt="Ebook Reader App Icon" />
+  <img width="500" height="500" alt="AppIconVocab" src="https://github.com/user-attachments/assets/b4a9e8d1-34da-4ead-9582-37764339b256" />"
 </p>
 
 <h1 align="center">Ebook Reader</h1>
